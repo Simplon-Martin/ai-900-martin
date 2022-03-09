@@ -3,11 +3,16 @@ $endpoint="https://cognitive-ressource.cognitiveservices.azure.com/"
 
 # Code to call Text Analytics service to analyze sentiment in text
 $txt_file = "review1.txt"
-if ($args.count -gt 0 -And $args[0] -in ("review1.txt", "review2.txt", "review3.txt", "review4.txt"))
+if ($args.count -gt 0 -And $args[0] -in ("review1.txt", "review2.txt", "review3.txt", "review4.txt", "review5.txt"))
 {
     $txt_file = $args[0]
 }
-$url = "https://github.com/Simplon-Martin/ai-900-martin/tree/main/data/text/reviews/$txt_file"
+# $url = "https://raw.githubusercontent.com/MicrosoftLearning/AI-900-AIFundamentals/main/data/text/reviews/$txt_file"
+$url = "https://raw.githubusercontent.com/Simplon-Martin/ai-900-martin/main/data/text/reviews/$txt_file"
+
+Write-Host($url)
+
+# parentheses are for readability
 
 $txt =  (Invoke-webrequest -URI $url).Content
 
