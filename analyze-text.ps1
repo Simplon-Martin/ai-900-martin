@@ -1,5 +1,5 @@
-$key="YOUR_KEY"
-$endpoint="YOUR_ENDPOINT"
+$key="a87bd9adb2704e70abfff77bfd5c5822"
+$endpoint="https://cognitive-ressource.cognitiveservices.azure.com/"
 
 # Code to call Text Analytics service to analyze sentiment in text
 $txt_file = "review1.txt"
@@ -7,7 +7,7 @@ if ($args.count -gt 0 -And $args[0] -in ("review1.txt", "review2.txt", "review3.
 {
     $txt_file = $args[0]
 }
-$url = "https://raw.githubusercontent.com/MicrosoftLearning/AI-900-AIFundamentals/main/data/text/reviews/$txt_file"
+$url = "https://github.com/Simplon-Martin/ai-900-martin/tree/main/data/text/reviews/$txt_file"
 
 $txt =  (Invoke-webrequest -URI $url).Content
 
