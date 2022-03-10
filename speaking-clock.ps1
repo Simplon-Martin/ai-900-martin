@@ -33,7 +33,8 @@ if ($analysis.DisplayText -eq "What time is it?"){
     $headers.Add( "Content-Type","application/ssml+xml" )
     $headers.Add( "X-Microsoft-OutputFormat","audio-16khz-128kbitrate-mono-mp3" )
 
-    $outputFile = "output.wav"
+    # $outputFile = "output.wav"
+    $outputFile = "outputTestVocale.wav"
 
     write-host "Synthesizing speech..."
     $result = Invoke-RestMethod -Method Post `
