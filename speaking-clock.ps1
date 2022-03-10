@@ -1,9 +1,10 @@
-$key="YOUR_KEY"
-$region="YOUR_LOCATION"
+$key="a87bd9adb2704e70abfff77bfd5c5822"
+$region="francecentral"
 
 
 # Code to call Speech to Text API
-$wav = "./data/speech/time.wav"
+# $wav = "./data/speech/time.wav"
+$wav = "./data/speech/testVocale.wav"
 
 $headers = @{}
 $headers.Add( "Ocp-Apim-Subscription-Key", $key )
